@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gameFragment">
+
+    <dialog
+        android:id="@+id/changePlayerDialogFragment"
+        android:name="com.example.guessinggame.ui.ChangePlayerDialogFragment"
+        android:label="ChangePlayerDialogFragment" />
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.guessinggame.ui.GameFragment"
+        android:label="GameFragment" >
+        <action
+            android:id="@+id/action_gameFragment_to_changePlayerDialogFragment"
+            app:destination="@id/changePlayerDialogFragment" />
+    </fragment>
+</navigation>
